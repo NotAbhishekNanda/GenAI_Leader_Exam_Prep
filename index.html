@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GenAI Leader Exam Practice</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>GenAI Leader Exam Practice</h1>
+    <nav class="tabs">
+      <button class="tab-btn active" data-tab="quiz">Practice Quiz</button>
+      <button class="tab-btn" data-tab="study">Study Q&amp;A</button>
+      <button class="tab-btn" data-tab="glossary">Glossary</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- QUIZ TAB -->
+    <section id="tab-quiz" class="tab-panel active">
+      <div class="quiz-controls">
+        <label>Section:
+          <select id="sectionFilter"><option value="all">All Sections</option></select>
+        </label>
+        <label>Difficulty:
+          <select id="difficultyFilter">
+            <option value="all">All</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </label>
+        <button id="shuffleBtn">Shuffle</button>
+        <button id="restartBtn">Restart</button>
+      </div>
+
+      <div id="quizProgress" class="progress-bar"><div id="quizProgressFill"></div></div>
+      <p id="quizStatus" class="status-line"></p>
+
+      <div id="quizCard" class="card"></div>
+
+      <div class="quiz-nav">
+        <button id="prevBtn">&larr; Previous</button>
+        <button id="nextBtn">Next &rarr;</button>
+      </div>
+
+      <div id="scoreSummary" class="card hidden"></div>
+    </section>
+
+    <!-- STUDY TAB -->
+    <section id="tab-study" class="tab-panel">
+      <input type="text" id="studySearch" placeholder="Search study questions..." class="search-box" />
+      <div id="studyList"></div>
+    </section>
+
+    <!-- GLOSSARY TAB -->
+    <section id="tab-glossary" class="tab-panel">
+      <input type="text" id="glossarySearch" placeholder="Search glossary..." class="search-box" />
+      <div id="glossaryList" class="glossary-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Google Cloud GenAI Leader Certification &mdash; Practice Companion</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
